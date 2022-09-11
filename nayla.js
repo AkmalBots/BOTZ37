@@ -149,7 +149,7 @@ case 'daftar':
 if (cekUser("id", sender) !== null) return reply("Kamu sudah terdaftar sebelum nya:3 Gunakan command #menu untuk mengetahui apa saja fungsi bot ini")
 daftar.push({id: sender, emote:"👑", ban:false, game: false, jawaban:false, hit:1, broadcast: false, koin:0})
 fs.writeFileSync('./db/function/daftar.json', JSON.stringify(daftar))
-reply(`[ *SUKSES TERDAFTAR* ] 
+reply(`[ *Berhasil Daftar Ngab Jan Lupa Subscribe Gua* ] 
 • *Pushname* : ${m.messages[0].pushName}
 • *Sender* : ${sender.split("@")[0]} 
 • *isGroup* : ${m.messages[0].isGroup}`)
@@ -163,14 +163,14 @@ break
 
 case 'waifu':case 'lick':case 'kiss':case 'awoo':case 'hug':case 'cry':case 'cuddle':case 'bully':case 'megumin':case 'shinobu':case 'neko':case 'slap':case 'wink':case 'dance':case 'poke':case 'glomp':case 'bite':case 'nom':case 'handhold':case 'highfive':case 'wave':case 'smile':case 'yeet':case 'bonk':case 'smug':case 'pat':
 if (cekUser("id", sender) == null) return reply("Kamu belum terdaftar di database bot, Silahkan daftar terlebih dahulu, gunakan command #daftar")
-reply("[❗] SEDANG DIPROSES")
+reply("[❗] SABAR DONG")
 fetchJson(`https://api.waifu.pics/sfw/${command}`).then(x => {
 nayla.sendMessage(from, {image:{url:x.url}, caption:"😄", mentions:[sender]},{quoted:nay1})})
 break 
 
 case 'waifu': case 'blowjob': case 'trap': case 'neko':
 if (cekUser("id", sender) == null) return reply("Kamu belum terdaftar di database bot, Silahkan daftar terlebih dahulu, gunakan command #daftar")
-reply("[❗] SEDANG DIPROSES")
+reply("[❗] SABAR DONG")
 fetchJson(`https://api.waifu.pics/nsfw/${command}`).then(x => {
 nayla.sendMessage(from, {image:{url:x.url}, caption:"😄", mentions:[sender]},{quoted:nay1})})
 break
@@ -190,7 +190,7 @@ break
 case 'chara': case 'anime':  
 if (cekUser("id", sender) == null) return reply("Kamu belum terdaftar di database bot, Silahkan daftar terlebih dahulu, gunakan command #daftar")
 if (!q) return reply("Masukkan nama karakter anime")
-reply("[❗] SEDANG DIPROSES")
+reply("[❗] SABAR DONG")
 hx.chara(q).then(result => {
 const x4 = []
 Object.keys(result).forEach((i) => {  
@@ -203,7 +203,7 @@ break
 case 'pin': case 'pinterest': 
 if (cekUser("id", sender) == null) return reply("Kamu belum terdaftar di database bot, Silahkan daftar terlebih dahulu, gunakan command #daftar")
 if (!q) return reply("Masukkan nama karakter anime")
-reply("[❗] SEDANG DIPROSES")
+reply("[❗] SABAR DONG")
 hx.pinterest(q).then(result => { 
 const x6 = []
 Object.keys(result).forEach((i) => {  
@@ -216,12 +216,12 @@ break
 case 'ssweb': case 'ss': 
 if (cekUser("id", sender) == null) return reply("Kamu belum terdaftar di database bot, Silahkan daftar terlebih dahulu, gunakan command #daftar")
 if (!q) return reply("Masukkan url, contoh? https://google.com")
-reply("[❗] SEDANG DIPROSES")
+reply("[❗] SABAR DONG")
 nayla.sendMessage(from, {image:{url:`https://api.popcat.xyz/screenshot?url=${q}`}, caption:"😗", mentions:[sender]},{quoted:nay1})
 break
 case 'randomcolor': 
 if (cekUser("id", sender) == null) return reply("Kamu belum terdaftar di database bot, Silahkan daftar terlebih dahulu, gunakan command #daftar")
-reply("[❗] SEDANG DIPROSES")
+reply("[❗] SABAR DONG")
 fetchJson("https://api.popcat.xyz/randomcolor").then(x => {
 nayla.sendMessage(from, {image:{url:x.image}, caption:`${x.name}(${x.hex})`, mentions:[sender]},{quoted:nay1})
 })
@@ -293,7 +293,7 @@ reply(`[ *FUN* ]\n• *Mess* : Mana yang kamu pilih?\n\n• *1* : ${x21.translat
 break
 case 'communism': case 'wanted': case 'gun': case 'clown': case 'drip': case 'uncover': case 'ad': case 'blur':
 if (cekUser("id", sender) == null) return reply("Kamu belum terdaftar di database bot, Silahkan daftar terlebih dahulu, gunakan command #daftar")
-reply("[❗] WAIT ( *Biasanya Proses ini akan membutuhkan waktu ±1 menit* )")
+reply("[❗] BENTAR ( *Biasanya Proses ini akan membutuhkan waktu ±1 menit* )")
 if (isImage || isQuotedImage) {
 var stream = await downloadContentFromMessage(nay.message.imageMessage || nay.message.extendedTextMessage?.contextInfo.quotedMessage.imageMessage, 'image')
 var buffer = Buffer.from([])
